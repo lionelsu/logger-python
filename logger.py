@@ -1,11 +1,11 @@
 from time import strftime
 
 UNI_ESC: str = '\u001b'
-CLR_WARNING: str = '%s[93m' % UNI_ESC
 CLR_ERR: str = '%s[91m' % UNI_ESC
-CLR_END: str = '%s[0m' % UNI_ESC
-CLR_MSG: str = '%s[94m' % UNI_ESC
 CLR_SUCCESS: str = '%s[92m' % UNI_ESC
+CLR_WARNING: str = '%s[93m' % UNI_ESC
+CLR_MSG: str = '%s[94m' % UNI_ESC
+CLR_END: str = '%s[0m' % UNI_ESC
 
 
 class Logger:
