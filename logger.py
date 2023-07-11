@@ -14,9 +14,13 @@ class Logger:
         return f'[{strftime("%Y-%m-%d %H:%M:%S")}] {msg}'
 
     @classmethod
-    def _log(cls, msg: str, color: str) -> None:
+    def _log(cls, msg: str, color: str = '') -> None:
         formatted_msg = f'{color}{cls._format(msg)}{CLR_END}'
         print(formatted_msg, flush=True)
+
+    @classmethod
+    def debug(cls, msg: str) -> None:
+        cls._log(msg)
 
     @classmethod
     def msg(cls, msg: str) -> None:
@@ -33,6 +37,3 @@ class Logger:
     @classmethod
     def error(cls, msg: str) -> None:
         cls._log(msg, CLR_ERR)
-
-
-log = Logger()
